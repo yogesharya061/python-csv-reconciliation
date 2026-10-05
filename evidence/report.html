@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Data delivery check</title>
+ <style>body{font:17px system-ui;background:#f3f6fa;color:#192b41;margin:45px auto;max-width:950px}header,section{background:white;padding:28px;border-radius:12px;margin:18px 0}h1{margin:0;color:#123f5a}pre{white-space:pre-wrap;overflow-wrap:anywhere}strong{color:#b34325}</style>
+ <header><p>PORTFOLIO DEMO · SYNTHETIC DATA</p><h1>Data delivery check</h1><p>CSV validation and source-to-target reconciliation</p></header><section><h2>REVIEW REQUIRED</h2><p><strong>6 findings</strong> · Source: 6 rows · Target: 3 rows</p><p>Missing: 1 · Extra: 1 · Changed: 1</p></section><section><h2>Audit details</h2><pre>{
+  &quot;input_sha256&quot;: &quot;7f57015ad529c382cd8fb26a17212b0066feaa69d9fc0900cbcc63e6bf77c51e&quot;,
+  &quot;source_rows&quot;: 6,
+  &quot;target_rows&quot;: 3,
+  &quot;source_valid_unique&quot;: 3,
+  &quot;target_valid_unique&quot;: 3,
+  &quot;source_issues&quot;: [
+    {
+      &quot;line&quot;: 5,
+      &quot;order_id&quot;: &quot;A3&quot;,
+      &quot;reason&quot;: &quot;duplicate_key&quot;
+    },
+    {
+      &quot;line&quot;: 6,
+      &quot;order_id&quot;: &quot;A4&quot;,
+      &quot;reason&quot;: &quot;invalid_amount&quot;
+    },
+    {
+      &quot;line&quot;: 7,
+      &quot;order_id&quot;: &quot;&quot;,
+      &quot;reason&quot;: &quot;missing_key&quot;
+    }
+  ],
+  &quot;target_issues&quot;: [],
+  &quot;missing_in_target&quot;: [
+    &quot;A3&quot;
+  ],
+  &quot;extra_in_target&quot;: [
+    &quot;A5&quot;
+  ],
+  &quot;changed&quot;: [
+    {
+      &quot;order_id&quot;: &quot;A2&quot;,
+      &quot;source&quot;: {
+        &quot;amount&quot;: &quot;75.50&quot;,
+        &quot;status&quot;: &quot;paid&quot;
+      },
+      &quot;target&quot;: {
+        &quot;amount&quot;: &quot;70.50&quot;,
+        &quot;status&quot;: &quot;paid&quot;
+      }
+    }
+  ],
+  &quot;source_valid_total&quot;: &quot;195.50&quot;,
+  &quot;target_valid_total&quot;: &quot;200.50&quot;,
+  &quot;passed&quot;: false
+}</pre></section></html>

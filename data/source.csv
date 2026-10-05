@@ -1,0 +1,7 @@
+order_id,amount,status
+A1,100.00,paid
+A2,75.50,paid
+A3,20.00,refunded
+A3,20.00,refunded
+A4,invalid,paid
+,50.00,paid

@@ -1,0 +1,47 @@
+{
+  "input_sha256": "7f57015ad529c382cd8fb26a17212b0066feaa69d9fc0900cbcc63e6bf77c51e",
+  "source_rows": 6,
+  "target_rows": 3,
+  "source_valid_unique": 3,
+  "target_valid_unique": 3,
+  "source_issues": [
+    {
+      "line": 5,
+      "order_id": "A3",
+      "reason": "duplicate_key"
+    },
+    {
+      "line": 6,
+      "order_id": "A4",
+      "reason": "invalid_amount"
+    },
+    {
+      "line": 7,
+      "order_id": "",
+      "reason": "missing_key"
+    }
+  ],
+  "target_issues": [],
+  "missing_in_target": [
+    "A3"
+  ],
+  "extra_in_target": [
+    "A5"
+  ],
+  "changed": [
+    {
+      "order_id": "A2",
+      "source": {
+        "amount": "75.50",
+        "status": "paid"
+      },
+      "target": {
+        "amount": "70.50",
+        "status": "paid"
+      }
+    }
+  ],
+  "source_valid_total": "195.50",
+  "target_valid_total": "200.50",
+  "passed": false
+}
